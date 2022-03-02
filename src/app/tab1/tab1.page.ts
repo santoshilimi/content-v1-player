@@ -1,122 +1,13 @@
 import { Component, OnInit, ViewChild, ElementRef, Inject, OnDestroy } from '@angular/core';
-
 declare const cordova;
-
+// import {} from ''
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  config = {
-    context: {
-      mode: 'play',
-      authToken: '',
-      sid: '7283cf2e-d215-9944-b0c5-269489c6fa56',
-      did: '3c0a3724311fe944dec5df559cc4e006',
-      uid: 'anonymous',
-      channel: '505c7c48ac6dc1edc9b08f21db5a571d',
-      pdata: {
-        id: 'prod.diksha.portal',
-        ver: '3.2.12',
-        pid: 'sunbird-portal.contentplayer'
-      },
-      contextRollup: {
-        l1: '505c7c48ac6dc1edc9b08f21db5a571d'
-      },
-      tags: [
-        ''
-      ],
-      actor: {id:111},
-      cdata: [],
-      timeDiff: 0,
-      objectRollup: {},
-      host: '',
-      endpoint: '',
-      userData: {
-        firstName: 'Sourav',
-        lastName: 'Dey'
-      }
-    },
-    config: {
-      traceId: 'afhjgh',
-      sideMenu: {
-        showShare: true,
-        showDownload: true,
-        showReplay: true,
-        showExit: true
-      }
-    },
-    metadata: {
-      "copyright": "Tamil Nadu",
-      "subject": [
-        "Computer Science"
-      ],
-      "channel": "01269878797503692810",
-      "language": [
-        "English"
-      ],
-      "mimeType": "application/vnd.ekstep.html-archive",
-      "objectType": "Content",
-      "gradeLevel": [
-        "Class 4",
-        "Class 2"
-      ],
-      "appIcon": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/content/do_21342267409765171211099/artifact/do_213254264969953280137_1617952267274_1200px-the_president_of_india_smt.thumb._pratibha_patil.thumb.jpg",
-      "primaryCategory": "Explanation Content",
-      "artifactUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/content/do_21342267409765171211099/artifact/htmlcontent_test_1638510022778.zip",
-      "contentType": "Resource",
-      "identifier": "do_21342267409765171211099",
-      "audience": [
-        "Student"
-      ],
-      "visibility": "Default",
-      "author": "Adarsh",
-      "mediaType": "content",
-      "osId": "org.ekstep.quiz.app",
-      "languageCode": [
-        "en"
-      ],
-      "license": "CC BY 4.0",
-      "name": "Dec03 html",
-      "attributions": [
-        "Tester"
-      ],
-      "status": "Live",
-      "code": "c974bb4a-7a28-4130-8e57-ae27ee3bcb31",
-      "interceptionPoints": {
-        
-      },
-      "streamingUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/content/html/do_2129513857902182401137-latest",
-      "medium": [
-        "English",
-        "Tamil"
-      ],
-      "createdOn": "2021-12-03T05:40:21.692+0000",
-      "copyrightYear": 2021,
-      "additionalCategories": [
-        "Textbook"
-      ],
-      "lastUpdatedOn": "2021-12-03T05:46:53.295+0000",
-      "creator": "ContentcreatorTN",
-      "pkgVersion": 2,
-      "versionKey": "1638510154012",
-      "framework": "tn_k-12_5",
-      "createdBy": "4cd4c690-eab6-4938-855a-447c7b1b8ea9",
-      "board": "State (Tamil Nadu)",
-      "resourceType": "Learn",
-      "orgDetails": {
-        "email": null,
-        "orgName": "Tamil Nadu"
-      },
-      "basePath": '',
-      "licenseDetails": {
-        "name": "CC BY 4.0",
-        "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
-        "description": "For details see below:"
-      }
-    }
-  }
+  playerConfig = {"metadata":{"copyright":"Test axis,2127","lastStatusChangedOn":"2022-01-11T15:21:01.393+0000","originData":{"identifier":"do_21345055814708428811903","repository":"https://dockstaging.sunbirded.org/api/content/v1/read/do_21345055814708428811903"},"parent":"do_2134509884923494401601","author":"?????","se_mediumIds":["ekstep_ncert_k-12_medium_english"],"mediaType":"content","name":"Learning Resource_webm","se_topicIds":["ekstep_ncert_k-12_topic_62113a9a1815b8f14e3103458f2b7c56cf2eeaf5"],"discussionForum":{"enabled":"No"},"createdOn":"2022-01-11T15:20:57.130+0000","createdFor":["01344484093886464035"],"channel":"01344484093886464035","source":"https://dockstaging.sunbirded.org/api/content/v1/read/do_21345055814708428811903","lastUpdatedOn":"2022-01-11T15:50:47.142+0000","subject":["Hindi"],"size":2662003,"se_topics":["कर चले हम फ़िदा"],"streamingUrl":"https://sunbirddevmedia-inct.streaming.media.azure.net/9e45c4d8-37bf-430f-a467-388b37075d25/webm1-copy-17.ism/manifest(format=m3u8-aapl-v3)","identifier":"do_21345055814708428811903","se_gradeLevelIds":["ekstep_ncert_k-12_gradelevel_class10"],"description":"webm","gradeLevel":["Class 10"],"ownershipType":["createdBy"],"mediumIds":["ekstep_ncert_k-12_medium_english"],"compatibilityLevel":1,"audience":["Student"],"trackable":{"enabled":"No","autoBatch":"No"},"se_boards":["CBSE"],"os":["All"],"primaryCategory":"Learning Resource","appIcon":"https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/content/do_21345055814708428811903/artifact/book.thumb.thumb.thumb.jpg","languageCode":["en"],"se_mediums":["English"],"se_subjectIds":["ekstep_ncert_k-12_subject_hindi"],"downloadUrl":"https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/content/do_21345055814708428811903/learning-resource_webm_1641914461030_do_21345055814708428811903_1.ecar","se_subjects":["Hindi"],"medium":["English"],"attributions":"","framework":"ekstep_ncert_k-12","creator":"cocreate1","versionKey":"1641916247142","mimeType":"video/webm","code":"b08a09d2-aeee-8c4d-3e0a-56293a0e27b4","se_boardIds":["ekstep_ncert_k-12_board_cbse"],"license":"CC BY 4.0","version":2,"prevStatus":"Draft","contentType":"PreviousBoardExamPapers","prevState":"Review","language":["English"],"board":"CBSE","lastPublishedOn":"2022-01-11T15:21:00.985+0000","objectType":"Content","origin":"do_21345055814708428811903","subjectIds":["ekstep_ncert_k-12_subject_hindi"],"status":"Live","programId":"51ae9520-6f9c-11ec-902a-3b5d30502ba5","createdBy":"53237627-a014-49cf-8f87-557089b90b15","dialcodeRequired":"No","lastSubmittedOn":"2022-01-11T15:20:59.858+0000","interceptionPoints":{},"keywords":["All_Contents"],"idealScreenSize":"normal","contentEncoding":"identity","consumerId":"cb069f8d-e4e1-46c5-831f-d4a83b323ada","lastPublishedBy":"6da7b18b-f25f-492c-8ab5-d1ecad0f61f4","topic":["कर चले हम फ़िदा"],"topicsIds":["ekstep_ncert_k-12_topic_62113a9a1815b8f14e3103458f2b7c56cf2eeaf5"],"se_gradeLevels":["Class 10"],"osId":"org.ekstep.quiz.app","se_FWIds":["ekstep_ncert_k-12"],"appId":"staging.dock.portal","contentDisposition":"inline","previewUrl":"https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/content/do_21345055814708428811903/artifact/webm1-copy-17.webm","boardIds":["ekstep_ncert_k-12_board_cbse"],"artifactUrl":"https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/content/do_21345055814708428811903/artifact/webm1-copy-17.webm","visibility":"Parent","credentials":{"enabled":"No"},"processId":"bf0fc4f7-56e7-4227-8f8a-aac94f35696c","variants":{"full":{"ecarUrl":"https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/content/do_21345055814708428811903/learning-resource_webm_1641914461030_do_21345055814708428811903_1.ecar","size":"2617248"},"spine":{"ecarUrl":"https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/content/do_21345055814708428811903/learning-resource_webm_1641914461354_do_21345055814708428811903_1_SPINE.ecar","size":"3563"}},"gradeLevelIds":["ekstep_ncert_k-12_gradelevel_class10"],"pkgVersion":1,"idealScreenDensity":"hdpi","contentMetadata":{"virality":{"origin":"67f21dd4d46fc2a6bf3893f4cc19743d86d482bc","transferCount":0}},"basePath":"/_app_file_/storage/emulated/0/Android/data/org.sunbird.app.staging/files/content/do_21345055814708428811903","isAvailableLocally":false},"config":{"showEndPage":false,"endPage":[{"template":"assessment","contentType":["SelfAssess"]}],"splash":{"webLink":"","text":"","icon":"","bgImage":"assets/icons/splacebackground_1.png"},"overlay":{"enableUserSwitcher":true,"showUser":false},"plugins":[{"id":"org.sunbird.player.endpage","ver":"1.1","type":"plugin"}],"nextContent":{"name":"PPDF","identifier":"do_21345055169350860811889"},"sideMenu":{"showShare":true,"showDownload":true,"showReplay":false,"showExit":true,"showPrint":false,"enable":false}},"context":{"did":"67f21dd4d46fc2a6bf3893f4cc19743d86d482bc","origin":"https://staging.sunbirded.org","pdata":{"id":"staging.diksha.app","pid":"sunbird.app.contentplayer","ver":"3.9.local.0-debug"},"objectRollup":{"l1":"do_2134509883461713921600","l2":"do_2134509884923494401601","l5":"do_21345055814708428811903"},"sid":"535bcf0a-dfc0-4813-9ef5-778abcfcf246","actor":{"type":"User","id":"8dcf9ce3-253d-4eb2-ab02-2dca6dd49df7"},"deeplinkBasePath":"","contextRollup":{"l1":"0126796199493140480"},"cdata":[{"id":"English","type":"Section"},{"id":"browse_by_category","type":"RootSection"},{"id":"do_2134509883461713921600","type":"RootId"},{"id":"content-detail","type":"ChildUi"},{"id":"teacher","type":"UserType"},{"id":"streaming","type":"PlayerLaunch"}],"channel":"0126796199493140480","userData":{"firstName":"ssss","lastName":""},"dispatcher":{}},"appContext":{"local":true,"server":false,"groupId":""},"data":{}}
 
   @ViewChild('preview', { static: false }) previewElement: ElementRef;
 
@@ -129,8 +20,8 @@ export class Tab1Page {
   }
   async ionViewWillEnter() {
     const playerInterval = setInterval(() => {
-        this.config['uid'] = this.config['context'].actor.id;
-        this.config['metadata'].basePath = '/_app_file_' + this.config['metadata'].basePath;
+        this.playerConfig['uid'] = this.playerConfig['context'].actor.id;
+        this.playerConfig['metadata'].basePath = '/_app_file_' + this.playerConfig['metadata'].basePath;
 
 
         if (this.previewElement?.nativeElement) {
@@ -143,7 +34,7 @@ export class Tab1Page {
             setTimeout(() => {
               this.previewElement.nativeElement.contentWindow['cordova'] = window['cordova'];
               this.previewElement.nativeElement.contentWindow['Media'] = window['Media'];
-              this.previewElement.nativeElement.contentWindow['initializePreview'](this.config);
+              this.previewElement.nativeElement.contentWindow['initializePreview'](this.playerConfig);
               this.previewElement.nativeElement.contentWindow.addEventListener('message', resp => {
                 if (resp.data === 'renderer:question:submitscore') {
                   // this.courseService.syncAssessmentEvents().subscribe();
@@ -153,16 +44,16 @@ export class Tab1Page {
                   if (resp.data['player.pdf-renderer.error']) {
                     const pdfError = resp.data['player.pdf-renderer.error'];
                     if (pdfError.name === 'MissingPDFException') {
-                      const downloadUrl = this.config['metadata']['contentData']['streamingUrl'] ||
-                        this.config['metadata']['contentData']['artifactUrl'];
+                      const downloadUrl = this.playerConfig['metadata']['contentData']['streamingUrl'] ||
+                        this.playerConfig['metadata']['contentData']['artifactUrl'];
                       // this.telemetryGeneratorService.generateInteractTelemetry(
                       //   InteractType.TOUCH,
                       //   InteractSubtype.DOWNLOAD_PDF_CLICKED,
                       //   Environment.PLAYER,
                       //   PageId.PLAYER,
-                      //   ContentUtil.getTelemetryObject(this.config['metadata']['contentData']),
+                      //   ContentUtil.getTelemetryObject(this.playerConfig['metadata']['contentData']),
                       //   undefined,
-                      //   ContentUtil.generateRollUp(this.config['metadata']['hierarchyInfo'], this.config['metadata']['identifier']));
+                      //   ContentUtil.generateRollUp(this.playerConfig['metadata']['hierarchyInfo'], this.playerConfig['metadata']['identifier']));
                       // this.openPDF(downloadUrl);
                     }
                   } else if (resp.data && resp.data.event === 'renderer:contentNotComaptible'
